@@ -1,6 +1,8 @@
 import { getProviders, signIn, useSession } from "next-auth/react";
 
 export default function LoginPage({ providers }) {
+  const { data, status } = useSession();
+  console.log({ data, status });
 
   return (
     <div className="flex items-center justify-center h-screen">
